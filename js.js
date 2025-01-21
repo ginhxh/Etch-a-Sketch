@@ -7,9 +7,13 @@ btn.addEventListener("click", () => {
   let divSize = input.value;
 
   if (divSize < 100 && divSize > 0) {
+    const squareSize = Math.floor(960 / divSize) - 4;
+
     container.innerHTML = "";
     for (let i = 0; i < divSize * divSize; i++) {
       const div = document.createElement("div");
+      div.style.width = `${squareSize}px`;
+      div.style.height = `${squareSize}px`;
       div.setAttribute("class", "div");
       container.append(div);
     }
@@ -24,9 +28,6 @@ btn.addEventListener("click", () => {
           let rndomIndex = Math.floor(Math.random() * colorHex.length);
           let letterColor = colorHex[rndomIndex];
           color += letterColor;
-          console.log(rndomIndex);
-          console.log(letterColor);
-          console.log(color);
         }
         divv.style.backgroundColor = color;
       });
