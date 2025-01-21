@@ -7,9 +7,13 @@ btn.addEventListener("click", () => {
   let divSize = input.value;
 
   if (divSize < 100 && divSize > 0) {
+    const squareSize = Math.floor(960 / divSize) - 4;
+
     container.innerHTML = "";
     for (let i = 0; i < divSize * divSize; i++) {
       const div = document.createElement("div");
+      div.style.width = `${squareSize}px`;
+      div.style.height = `${squareSize}px`;
       div.setAttribute("class", "div");
       container.append(div);
     }
