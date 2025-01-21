@@ -24,9 +24,6 @@ btn.addEventListener("click", () => {
           let rndomIndex = Math.floor(Math.random() * colorHex.length);
           let letterColor = colorHex[rndomIndex];
           color += letterColor;
-          console.log(rndomIndex);
-          console.log(letterColor);
-          console.log(color);
         }
         divv.style.backgroundColor = color;
       });
